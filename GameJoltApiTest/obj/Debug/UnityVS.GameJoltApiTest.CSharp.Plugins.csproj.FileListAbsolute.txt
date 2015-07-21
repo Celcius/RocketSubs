@@ -1,0 +1,13 @@
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\Ivo\Desktop\GameJoltApiTest\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+C:\Users\Ivo\Desktop\GameJoltApiTest\obj\Debug\UnityVS.GameJoltApiTest.CSharp.Plugins.csprojResolveAssemblyReference.cache
+C:\Users\Ivo\Desktop\GameJoltApiTest\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Ivo\Desktop\GameJoltApiTest\obj\Debug\Assembly-CSharp-firstpass.pdb
