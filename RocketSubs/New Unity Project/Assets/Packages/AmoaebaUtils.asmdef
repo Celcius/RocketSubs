@@ -1,0 +1,14 @@
+{
+    "name": "AmoaebaUtils",
+    "references": [
+        "GUID:f7195ccab81fd4344b16510e88ecd2f6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

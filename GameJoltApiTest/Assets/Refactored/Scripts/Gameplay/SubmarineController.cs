@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using AmoaebaUtils;
 
 public class SubmarineController : MonoBehaviour 
 {
@@ -9,8 +10,11 @@ public class SubmarineController : MonoBehaviour
     private SubmarineStats stats;
     
     [SerializeField]
-    private BoolVar onSea;
+    private BoolEvent onSeaDetected;
     
+    [SerializeField]
+    private BoolVar onSea;
+
     [SerializeField]
     private FloatVar fuel;
 
@@ -22,9 +26,14 @@ public class SubmarineController : MonoBehaviour
     
     [SerializeField]
     private BoolVar inputRight;
+
+    [SerializeField]
+    private VoidEvent bounceEvent;
+    
+    [SerializeField]
+    private Vector2Var positionVar;
     
     private Rigidbody2D body;
-    public bool wasOnAir = false;
     private Vector2 speed = Vector3.zero;
     private float timeSinceFire = 0.0f;
 
@@ -45,6 +54,7 @@ public class SubmarineController : MonoBehaviour
 	void Start () {
         //ScoreManager.Instance.sub = this;
         onSea.Value = true;
+        onSeaDetected.OnEvent += OnSeaChangeDetected;
         fuel.Value = stats.MaxFuel;
 
         body = GetComponent<Rigidbody2D>();
@@ -77,7 +87,7 @@ public class SubmarineController : MonoBehaviour
         }
         UpdateSea();
         UpdateRotation();
-        updateSpeed();
+        UpdateSpeed();
         updateLooks();
 	}
 
@@ -257,67 +267,89 @@ public class SubmarineController : MonoBehaviour
     
     private Vector2 GetForward()
     {
-        return (Vector2)RotatePointAroundPivot(new Vector3(-1, 0, 0), Vector3.zero, transform.localRotation.eulerAngles);
+        return transform.up;
     }
+
+    private void OnSeaChangeDetected(bool isOnSea)
+    {
+        if(onSea.Value == isOnSea || !isOnSea)
+        {
+            onSea.Value = isOnSea;
+            return;
+        }
+        else if(!onSea.Value && isOnSea)
+        {
+            bool didBounce = HandleBounce();
+            
+            if(didBounce)
+            {
+                onSea.Value = false;
+                bounceEvent.Invoke();
+            }
+            else
+            {
+                onSea.Value = isOnSea;
+            }
+        }
+        else
+        {
+            onSea.Value = isOnSea;
+        }
+    }
+
     private bool HandleBounce()
     {
-        bool enteringWater = onSea.Value && wasOnAir;
-        if(!enteringWater)
+        if(onSea.Value)
         {
             return false;
         }
 
         Vector2 forward = GetForward();
         float entryAngle = Vector2.Angle(-Vector2.up, forward);
-        float entrySpeed = Mathf.Abs(body.velocity.x);
+        float entrySpeedX = Mathf.Abs(body.velocity.x);
+        float entrySpeedY = Mathf.Abs(body.velocity.y);
 
-        bool shouldBounce =  (entryAngle >= stats.BounceAngle) && (entryAngle <= stats.MaxBounceAngle) && (entrySpeed > stats.BounceSpeed);
+        bool shouldBounce =  (entryAngle >= stats.BounceAngle) 
+                            && (entryAngle <= stats.MaxBounceAngle)
+                            && (entrySpeedX > stats.BounceSpeedX)
+                            && (entrySpeedY > stats.BounceSpeedY);
 
-        Debug.Log("Entry Angle: " +  entryAngle + " Entry Speed: " + entrySpeed + " Bounce:" + shouldBounce);
+        Debug.Log("Entry Angle: " +  entryAngle + " Entry Speed( " + entrySpeedX +","+entrySpeedY + ") Bounce:" + shouldBounce);
         
         if(shouldBounce)
         {
             rotateSpeed = 0;
             rotateAccel = 0;
-            Vector2 bounceVelocity = new Vector2(body.velocity.normalized.x * stats.BounceHorizontalLoss,
-                                                -body.velocity.normalized.y * stats.BounceVerticalLoss);
-            if(entryAngle < 90.0f)
-            {
-                body.MoveRotation(body.rotation + (90.0f-entryAngle)*2.0f*Mathf.Sign(body.velocity.normalized.x));
-            }
-            
-            body.velocity = bounceVelocity*body.velocity.magnitude;
+            Vector2 normalizedVec = body.velocity;
+            Vector2 magnitudes = new Vector2(Mathf.Abs(body.velocity.x), Mathf.Abs(body.velocity.y));
+            Vector2 bounceVelocity = new Vector2(normalizedVec.x * magnitudes.x * stats.BounceHorizontalLoss,
+                                                -normalizedVec.y * magnitudes.y * stats.BounceVerticalLoss);
+            body.velocity = bounceVelocity;
+            float newRot = body.rotation +(90.0f-entryAngle)*2.0f*Mathf.Sign(body.velocity.normalized.x);
+            body.SetRotation(newRot);
         }
         return shouldBounce;
     }
 
-    private void updateSpeed()
+    private void UpdateSpeed()
     {
-        bool bounced = HandleBounce();
+        body.drag = onSea.Value ? stats.SeaDrag : stats.AirDrag;
         
-        if(!bounced)
-        {
-            body.drag = onSea.Value ? stats.SeaDrag : stats.AirDrag;
-        }
-
-        bool movingForward = inputForward.Value && (!bounced && onSea.Value || fuel.Value > 0 && !onSea.Value);
+        bool movingForward = inputForward.Value && (onSea || (fuel.Value > 0 && !onSea.Value));
         Vector2 forward = GetForward();
    
         if(movingForward)
         {
-            body.velocity += (Vector2)forward * Time.deltaTime * (!bounced && onSea.Value? stats.SeaImpulse : stats.AirImpulse);
+            body.velocity += (Vector2)forward * Time.deltaTime * (onSea.Value? stats.SeaImpulse : stats.AirImpulse);
         } 
         
-        UpdateFuel(movingForward, !bounced && onSea.Value);
+        UpdateFuel(movingForward, onSea.Value);
         
         body.gravityScale = onSea.Value? stats.SeaGravity : stats.AirGravity;
-        body.velocity = body.velocity.normalized * Mathf.Clamp(body.velocity.magnitude, 0, (!bounced && onSea.Value? stats.MaxSeaSpeed : stats.MaxAirSpeed));
-        //Debug.Log("Moving at " + body.velocity.magnitude + " Dir: " + body.velocity.normalized);
-
- 
-        //updateFire(forward);
-        wasOnAir = !onSea.Value || bounced;
+        body.velocity = body.velocity.normalized * Mathf.Clamp(body.velocity.magnitude, 0, (onSea.Value? stats.MaxSeaSpeed : stats.MaxAirSpeed));
         storedForward = forward;
+
+        positionVar.Value = (Vector2)transform.position;
     }
 
     void UpdateRotation()
@@ -365,8 +397,6 @@ public class SubmarineController : MonoBehaviour
         }
         rotateSpeed = Mathf.Clamp(rotateSpeed, -stats.MaxRotateSpeed, stats.MaxRotateSpeed);
 
-        body.MoveRotation(body.rotation + rotateSpeed);
-        
+        body.MoveRotation(body.rotation + rotateSpeed);   
     }
-    
 }
