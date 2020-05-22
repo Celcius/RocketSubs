@@ -17,12 +17,12 @@ public abstract class Spawnee : MonoBehaviour
 
     private event OnSpawneeDestruction OnDestructionCallback;
     
-    public void OnSpawn(SpawnedDirection spawnDir, OnSpawneeDestruction destructionCall)
+    public virtual void OnSpawn(SpawnedDirection spawnDir, OnSpawneeDestruction destructionCall)
     {
         OnDestructionCallback += destructionCall;
     }
 
-    public void Unspawn()
+    public virtual void Unspawn()
     {
         Destroy(this.gameObject);
     }

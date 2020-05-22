@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a107813818a2db45a4872014c4c5b92, type: 3}
+  m_Name: SplashSystem
+  m_EditorClassIdentifier: 
+  splashPrefab: {fileID: 932918346053191369, guid: b43f52c49c313d645a875d94566a2f5a,
+    type: 3}
+  diveSplashPrefab: {fileID: 4435582792741893438, guid: c2cc95dd9a90316419e344578d3dbdb6,
+    type: 3}
+  submarinePosition: {fileID: 11400000, guid: efb67622da7966b40a7cc90bda1ed3d3, type: 2}
+  submarineBody: {fileID: 11400000, guid: 51a1de6128f71a24c94f730159d8db88, type: 2}
+  heightThreshold: 15
+  waterHeight: 0
+  timeBetweenSplashes: 0.1
+  bounceEvent: {fileID: 11400000, guid: 9b63d194048d0c44da41405fba19fb7e, type: 2}

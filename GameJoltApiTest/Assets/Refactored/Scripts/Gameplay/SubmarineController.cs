@@ -32,6 +32,9 @@ public class SubmarineController : MonoBehaviour
     
     [SerializeField]
     private Vector2Var positionVar;
+
+    [SerializeField]
+    private BoolVar usingFuel;
     
     private Rigidbody2D body;
     private Vector2 speed = Vector3.zero;
@@ -53,6 +56,7 @@ public class SubmarineController : MonoBehaviour
 
 	void Start () {
         //ScoreManager.Instance.sub = this;
+        
         onSea.Value = true;
         onSeaDetected.OnEvent += OnSeaChangeDetected;
         fuel.Value = stats.MaxFuel;
@@ -335,9 +339,12 @@ public class SubmarineController : MonoBehaviour
     {
         body.drag = onSea.Value ? stats.SeaDrag : stats.AirDrag;
         
-        bool movingForward = inputForward.Value && (onSea || (fuel.Value > 0 && !onSea.Value));
+        bool isUsingFuel = (fuel.Value > 0 && !onSea.Value);
+        bool movingForward = inputForward.Value && (onSea.Value || isUsingFuel);
         Vector2 forward = GetForward();
-   
+        
+        usingFuel.Value = isUsingFuel;
+
         if(movingForward)
         {
             body.velocity += (Vector2)forward * Time.deltaTime * (onSea.Value? stats.SeaImpulse : stats.AirImpulse);
