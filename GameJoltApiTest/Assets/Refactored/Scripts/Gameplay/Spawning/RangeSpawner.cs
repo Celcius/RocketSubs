@@ -30,10 +30,10 @@ public class RangeSpawner : Spawner
         switch (type)
         {
             case RangeType.Box:
-                return center + MathUtils.RandomPointInRectangle(computedRange);
+                return center + GeometryUtils.RandomPointInRectangle(computedRange);
             case RangeType.Oval:
-                return center + MathUtils.RandomPointInRectangle(computedRange);
+                return center + GeometryUtils.RandomPointInRectangle(computedRange);
         }
-        return MathUtils.RandomPointInRectangle(computedRange);
+        return GeometryUtils.RandomPointInRectangle(computedRange);
     }
 }

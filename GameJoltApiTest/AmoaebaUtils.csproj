@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EF3FE60E-44F7-64EC-A56F-86FE2852A471}</ProjectGuid>
+    <ProjectGuid>{0ee63fef-f744-ec64-a56f-86fe2852a471}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>AmoaebaUtils</AssemblyName>
@@ -51,6 +51,7 @@
      <Compile Include="Assets\Packages\Core\BootScriptableObject.cs" />
      <Compile Include="Assets\Packages\Core\CoroutineRunner.cs" />
      <Compile Include="Assets\Packages\Core\FileUtils.cs" />
+     <Compile Include="Assets\Packages\Core\GeometryUtils.cs" />
      <Compile Include="Assets\Packages\Core\MathUtils.cs" />
      <Compile Include="Assets\Packages\Core\PreloadedScriptablesBooter.cs" />
      <Compile Include="Assets\Packages\Core\ReflectionUtils.cs" />
@@ -58,12 +59,20 @@
      <Compile Include="Assets\Packages\Core\SceneTransitionHandler.cs" />
      <Compile Include="Assets\Packages\Core\SceneTransitionOperation.cs" />
      <Compile Include="Assets\Packages\Core\Singleton.cs" />
+     <Compile Include="Assets\Packages\Core\StructUtils.cs" />
      <Compile Include="Assets\Packages\Core\UndrawableGraphic.cs" />
+     <Compile Include="Assets\Packages\Core\UnityEngineUtils.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\CurveTransformMove.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\DestroyOnCollision.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\FollowTransform.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\InstantiateOnCollision.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\LinearTransformMovement.cs" />
+     <Compile Include="Assets\Packages\GameplayUtils\Parallax\AnimateParallax.cs" />
+     <Compile Include="Assets\Packages\GameplayUtils\Parallax\Parallaxable.cs" />
+     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxableSprite.cs" />
+     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxController.cs" />
+     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxFollowTransform.cs" />
+     <Compile Include="Assets\Packages\GameplayUtils\PhysicsAnimationCurve.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\TransformMovement.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyForceToBody2DOnCollision.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyToFloatVarOnCollision.cs" />
@@ -91,15 +100,6 @@
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\VoidEvent.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\SingletonScriptableObject.cs" />
      <None Include="Assets\Packages\AmoaebaUtils.asmdef" />
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -315,6 +315,9 @@
  </Reference>
  <Reference Include="TinyJSON">
  <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/GoogleExporter/Google Sheets to Unity/Scripts/v3/Plugins/TinyJSON.dll</HintPath>
+ </Reference>
+ <Reference Include="NSubstitute">
+ <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.2d.common@1.2.0-preview.1/Tests/Editor/Lib/NSubstitute/NSubstitute.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -682,6 +685,20 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{2327abc8-bfb5-0940-8182-82fd807fd021}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
+      <Project>{bb9ecf31-5dcd-f56f-843a-8ceacafc2a63}</Project>
+      <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{0f6e332f-38f6-c2ba-cecc-47b6d4520d50}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

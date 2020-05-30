@@ -7,17 +7,26 @@ public class SeaController : MonoBehaviour {
     [SerializeField]
     private BoolEvent onSeaDetected;
 
-    void OnTriggerEnter2D(Collider2D other)
+    [SerializeField]
+    private Vector2Var submarinePos;
+
+    private void Awake() 
     {
-        if(other.tag == "Player")
+        submarinePos.OnChange += OnPosChanged;
+    }
+
+    private void OnDestroy()
+    {
+        submarinePos.OnChange -= OnPosChanged;
+    }
+
+    private void OnPosChanged(Vector2 oldPos, Vector2 newPos)
+    {
+        if(oldPos.y >= transform.position.y && newPos.y < transform.position.y)
         {
             onSeaDetected.Invoke(true);
         }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if(other.tag == "Player")
+        else if(oldPos.y < transform.position.y && newPos.y >= transform.position.y)
         {
             onSeaDetected.Invoke(false);
         }

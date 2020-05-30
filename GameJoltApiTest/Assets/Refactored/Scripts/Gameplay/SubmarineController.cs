@@ -343,7 +343,7 @@ public class SubmarineController : MonoBehaviour
         bool movingForward = inputForward.Value && (onSea.Value || isUsingFuel);
         Vector2 forward = GetForward();
         
-        usingFuel.Value = isUsingFuel;
+        usingFuel.Value = isUsingFuel && movingForward;
 
         if(movingForward)
         {

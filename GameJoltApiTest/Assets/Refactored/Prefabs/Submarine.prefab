@@ -92,8 +92,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.4}
-  m_Size: {x: 1.8, y: 6.3}
+  m_Offset: {x: 0, y: 0.2717061}
+  m_Size: {x: 1.8, y: 5.236985}
   m_Direction: 0
 --- !u!114 &465302917025153212
 MonoBehaviour:
@@ -192,12 +192,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c512363f07f79f9459f5c6353f2b5485, type: 3}
+  m_Sprite: {fileID: 8939199459898043502, guid: be998c30fb04c044782dd88a6815b1ce,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.375, y: 1.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -216,13 +217,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usingFuel: {fileID: 11400000, guid: 6aa1e2b02314c434ea6ebd88b05f8ba9, type: 2}
+  movingForward: {fileID: 11400000, guid: bdce8aaf5ab1a1e418e5f31075578d10, type: 2}
   onSea: {fileID: 11400000, guid: 1b9a15de53ad8e145a61ab1d82b8a4ab, type: 2}
   usingFuelAnimation:
-  - {fileID: 21300000, guid: 2e7cf08b1aa23b740ad383b30b1c8ab1, type: 3}
-  - {fileID: 21300000, guid: 2e7cf08b1aa23b740ad383b30b1c8ab1, type: 3}
-  - {fileID: 21300000, guid: c512363f07f79f9459f5c6353f2b5485, type: 3}
+  - {fileID: 6007021837820384398, guid: be998c30fb04c044782dd88a6815b1ce, type: 3}
+  - {fileID: 6007021837820384398, guid: be998c30fb04c044782dd88a6815b1ce, type: 3}
+  - {fileID: 8939199459898043502, guid: be998c30fb04c044782dd88a6815b1ce, type: 3}
   normalAnimation:
-  - {fileID: 21300000, guid: c512363f07f79f9459f5c6353f2b5485, type: 3}
+  - {fileID: 8939199459898043502, guid: be998c30fb04c044782dd88a6815b1ce, type: 3}
 --- !u!114 &2594696107007611158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2925245352044571446}
-  frames: []
+  frames:
+  - {fileID: 8939199459898043502, guid: be998c30fb04c044782dd88a6815b1ce, type: 3}
   frameTime: 0.1
   randomizeStart: 0
   loop: 1

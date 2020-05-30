@@ -42,86 +42,16 @@ SpriteAtlas:
       enableTightPacking: 1
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: e84d44b29370ba741b80a45ca221fc3a, type: 3}
-    - {fileID: 2800000, guid: c716c23ae3ee7da47915152f575f7fe1, type: 3}
-    - {fileID: 2800000, guid: c411ba18714d3634385d58793ec0d994, type: 3}
-    - {fileID: 2800000, guid: 3d037921050d011459c918d9b5b788aa, type: 3}
-    - {fileID: 2800000, guid: fc9a8c9b0106a0b49b23d0705c9ce091, type: 3}
-    - {fileID: 2800000, guid: 8a9e8a9a662021f48bb56b929db355ef, type: 3}
-    - {fileID: 2800000, guid: df64f27b9a272114e91a5d9c498eee24, type: 3}
-    - {fileID: 2800000, guid: f3a079d04c86f2942abae55a2039140e, type: 3}
-    - {fileID: 2800000, guid: 3856162a7e996d648ac4d02dc8845253, type: 3}
-    - {fileID: 2800000, guid: fc450e0355181214da534b0c1eaaba0b, type: 3}
-    - {fileID: 2800000, guid: fa9f2c9230340ec46bf657ebdfa8ceae, type: 3}
-    - {fileID: 2800000, guid: d03eba74627cabe40a2162d388783eae, type: 3}
-    - {fileID: 2800000, guid: 0e1b34b0f209a934690a39112e3d7436, type: 3}
-    - {fileID: 2800000, guid: 4e6d398defe405d47a4b7faed9e4b425, type: 3}
-    - {fileID: 2800000, guid: 8e9a19f048a6aa645ab43b98984fd190, type: 3}
     - {fileID: 2800000, guid: 8b60e3d55e2e7754e90e0cad40b25aee, type: 3}
-    - {fileID: 2800000, guid: 1f7680b585404a646ab49a79738aa414, type: 3}
-    - {fileID: 2800000, guid: 4348ac488617a9542b0495dd917898bf, type: 3}
-    - {fileID: 2800000, guid: e95265404c199044d8b7cf9146a151ad, type: 3}
-    - {fileID: 2800000, guid: 6bb217808f42aaa4a97cf207b459fd3f, type: 3}
-    - {fileID: 2800000, guid: c512363f07f79f9459f5c6353f2b5485, type: 3}
-    - {fileID: 2800000, guid: 2e7cf08b1aa23b740ad383b30b1c8ab1, type: 3}
-    - {fileID: 2800000, guid: 9f00ccf1f77828c4591e418066dd01db, type: 3}
-    - {fileID: 2800000, guid: c9e7cfa235b9d874e934cba75a5da77a, type: 3}
-    - {fileID: 2800000, guid: f928a7f13760aae46bb8d8c06bb9bf8e, type: 3}
-    totalSpriteSurfaceArea: 14091
+    totalSpriteSurfaceArea: 8370
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 292fdd6c8d1db3b9b94887273712ecc5
+      Hash: ef40521f56b7bb51fd04cbb46a28ae86
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: e95265404c199044d8b7cf9146a151ad, type: 3}
-  - {fileID: 21300000, guid: 6bb217808f42aaa4a97cf207b459fd3f, type: 3}
-  - {fileID: 21300000, guid: 0e1b34b0f209a934690a39112e3d7436, type: 3}
-  - {fileID: 21300000, guid: f3a079d04c86f2942abae55a2039140e, type: 3}
-  - {fileID: 21300000, guid: 8e9a19f048a6aa645ab43b98984fd190, type: 3}
-  - {fileID: 21300000, guid: 3d037921050d011459c918d9b5b788aa, type: 3}
-  - {fileID: 21300000, guid: 9f00ccf1f77828c4591e418066dd01db, type: 3}
-  - {fileID: 21300000, guid: fa9f2c9230340ec46bf657ebdfa8ceae, type: 3}
-  - {fileID: 21300000, guid: c9e7cfa235b9d874e934cba75a5da77a, type: 3}
-  - {fileID: 21300000, guid: e84d44b29370ba741b80a45ca221fc3a, type: 3}
-  - {fileID: 21300000, guid: fc450e0355181214da534b0c1eaaba0b, type: 3}
-  - {fileID: 21300000, guid: d03eba74627cabe40a2162d388783eae, type: 3}
-  - {fileID: 21300000, guid: 1f7680b585404a646ab49a79738aa414, type: 3}
   - {fileID: 21300000, guid: 8b60e3d55e2e7754e90e0cad40b25aee, type: 3}
-  - {fileID: 21300000, guid: c411ba18714d3634385d58793ec0d994, type: 3}
-  - {fileID: 21300000, guid: 4348ac488617a9542b0495dd917898bf, type: 3}
-  - {fileID: 21300000, guid: 3856162a7e996d648ac4d02dc8845253, type: 3}
-  - {fileID: 21300000, guid: c716c23ae3ee7da47915152f575f7fe1, type: 3}
-  - {fileID: 21300000, guid: 8a9e8a9a662021f48bb56b929db355ef, type: 3}
-  - {fileID: 21300000, guid: df64f27b9a272114e91a5d9c498eee24, type: 3}
-  - {fileID: 21300000, guid: 2e7cf08b1aa23b740ad383b30b1c8ab1, type: 3}
-  - {fileID: 21300000, guid: fc9a8c9b0106a0b49b23d0705c9ce091, type: 3}
-  - {fileID: 21300000, guid: 4e6d398defe405d47a4b7faed9e4b425, type: 3}
-  - {fileID: 21300000, guid: c512363f07f79f9459f5c6353f2b5485, type: 3}
   m_PackedSpriteNamesToIndex:
-  - splash2
-  - splash3
-  - helicopter2
-  - explosionSelf
-  - helicopter4
-  - explosion
-  - subFirePain
-  - explosionSelf3
-  - subPAin
-  - enemyMissile
-  - explosionSelf2
-  - helicopter1
-  - missile
   - Logo3
-  - EnemySubFire
-  - splash
-  - explosionSelf1
-  - EnemySub
-  - explosion2
-  - explosion3
-  - subFire 1
-  - explosion1
-  - helicopter3
-  - sub 2
   m_Tag: BasicSprites
   m_IsVariant: 0

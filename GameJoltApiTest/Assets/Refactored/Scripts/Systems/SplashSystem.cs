@@ -8,7 +8,7 @@ using AmoaebaUtils;
 using UnityEditor;
 #endif
 
-public class SplashSystem : BootScriptableObject
+public class SplashSystem : ScriptableObject
 {
    [SerializeField]
    private Transform splashPrefab;
@@ -37,7 +37,7 @@ public class SplashSystem : BootScriptableObject
    private IEnumerator splashRoutine;
    private CoroutineRunner splashRunner;
 
-   protected override void OnEnable()
+   protected void OnEnable()
    {
 #if UNITY_EDITOR       
        if(!(Application.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode))
@@ -45,12 +45,11 @@ public class SplashSystem : BootScriptableObject
             return;
        }
 #endif
-       base.OnEnable();
        UnregisterEvents();
        RegisterEvents();
    }
 
-   protected override void OnDisable()
+   protected void OnDisable()
    {
 #if UNITY_EDITOR
        if(!(Application.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode))
@@ -58,8 +57,6 @@ public class SplashSystem : BootScriptableObject
             return;
        }
 #endif
-       base.OnDisable();
-       
        UnregisterEvents();
        if(splashRunner != null)
        {

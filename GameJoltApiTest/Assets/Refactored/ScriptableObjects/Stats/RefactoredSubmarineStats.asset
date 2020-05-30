@@ -15,20 +15,20 @@ MonoBehaviour:
   RotateAccelInc: 10
   AngularDrag: 50
   MaxRotateAccelSpeed: 5
-  MaxRotateSpeed: 5
+  MaxRotateSpeed: 8
   TimeToFire: 0.2
   MaxHealth: 3
   MaxFuel: 1
-  FuelConsumptionTime: 2.5
+  FuelConsumptionTime: 5
   FuelRecoveryTime: 5
-  MaxAirSpeed: 75
-  MaxSeaSpeed: 30
-  AirGravity: 5
+  MaxAirSpeed: 40
+  MaxSeaSpeed: 25
+  AirGravity: 2
   SeaGravity: 0.5
-  AirImpulse: 200
-  SeaImpulse: 150
+  AirImpulse: 150
+  SeaImpulse: 100
   SeaDrag: 2
-  AirDrag: 0.2
+  AirDrag: 0.5
   BounceSpeedX: 25
   BounceSpeedY: 10
   BounceAngle: 45

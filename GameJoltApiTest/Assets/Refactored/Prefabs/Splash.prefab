@@ -126,9 +126,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8633468174501176913}
   frames:
-  - {fileID: 21300000, guid: 4348ac488617a9542b0495dd917898bf, type: 3}
-  - {fileID: 21300000, guid: e95265404c199044d8b7cf9146a151ad, type: 3}
-  - {fileID: 21300000, guid: 6bb217808f42aaa4a97cf207b459fd3f, type: 3}
+  - {fileID: -8337916047618741827, guid: f9f1dc1c7f0260540bef4ffae4afd669, type: 3}
+  - {fileID: 6884952545812941631, guid: f9f1dc1c7f0260540bef4ffae4afd669, type: 3}
+  - {fileID: 445327774518689385, guid: f9f1dc1c7f0260540bef4ffae4afd669, type: 3}
+  - {fileID: 6884952545812941631, guid: f9f1dc1c7f0260540bef4ffae4afd669, type: 3}
+  - {fileID: -8337916047618741827, guid: f9f1dc1c7f0260540bef4ffae4afd669, type: 3}
   frameTime: 0.2
   randomizeStart: 0
   loop: 0

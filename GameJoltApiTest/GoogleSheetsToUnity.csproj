@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{66997263-D8D8-B376-9D83-EB9693C8F585}</ProjectGuid>
+    <ProjectGuid>{63729966-d8d8-76b3-9d83-eb9693c8f585}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>GoogleSheetsToUnity</AssemblyName>
@@ -64,21 +64,6 @@
      <Compile Include="Assets\Packages\GoogleExporter\Google Sheets to Unity\Scripts\v4\Public\SpreadsheetManager.cs" />
      <Compile Include="Assets\Packages\GoogleExporter\Google Sheets to Unity\Scripts\v4\Spreadsheet.cs" />
      <None Include="Assets\Packages\GoogleExporter\Google Sheets to Unity\GoogleSheetsToUnity.asmdef" />
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -300,6 +285,9 @@
  </Reference>
  <Reference Include="TinyJSON">
  <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/GoogleExporter/Google Sheets to Unity/Scripts/v3/Plugins/TinyJSON.dll</HintPath>
+ </Reference>
+ <Reference Include="NSubstitute">
+ <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.2d.common@1.2.0-preview.1/Tests/Editor/Lib/NSubstitute/NSubstitute.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/IvoCapelo/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -679,6 +667,28 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{2327abc8-bfb5-0940-8182-82fd807fd021}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
+      <Project>{bb9ecf31-5dcd-f56f-843a-8ceacafc2a63}</Project>
+      <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{0f6e332f-38f6-c2ba-cecc-47b6d4520d50}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{324de4e5-698f-5e65-417c-d8b61ea6821f}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{4679078f-5b71-2013-aa39-3c498fda06b9}</Project>
+      <Name>UnityEngine.TestRunner</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

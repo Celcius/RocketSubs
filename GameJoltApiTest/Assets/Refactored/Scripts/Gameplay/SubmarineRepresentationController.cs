@@ -10,6 +10,9 @@ public class SubmarineRepresentationController : MonoBehaviour
 {
     [SerializeField]
     private BoolVar usingFuel;
+    
+    [SerializeField]
+    private BoolVar movingForward;
 
     [SerializeField]
     private BoolVar onSea;
@@ -31,32 +34,35 @@ public class SubmarineRepresentationController : MonoBehaviour
 
         usingFuel.OnChange += OnFuelChange;
         onSea.OnChange += OnSeaChange;
+        movingForward.OnChange += OnMovingForwardChange;
     }
 
     public void OnDestroy()
     {
         usingFuel.OnChange -= OnFuelChange;
         onSea.OnChange -= OnSeaChange;
+        movingForward.OnChange -= OnMovingForwardChange;
     }
 
     private void OnSeaChange(bool oldVal, bool newVal)
     {
-        if(oldVal == newVal)
-        {
-            return;
-        }
-
-        OnFuelChange(false,newVal? true : usingFuel.Value);
+        UpdateRepresentation();
     }
 
     private void OnFuelChange(bool oldVal, bool newVal)
     {
-        if(oldVal == newVal || onSea.Value)
-        {
-            return;
-        }
+        UpdateRepresentation();
+        
+    }
 
-        frameAnimator.StartPlaying(newVal? usingFuelAnimation : normalAnimation);
+    private void OnMovingForwardChange(bool oldVal, bool newVal)
+    {
+        UpdateRepresentation();
+    }
+
+    private void UpdateRepresentation()
+    {
+        frameAnimator.StartPlaying((usingFuel.Value || onSea.Value) && movingForward.Value? usingFuelAnimation : normalAnimation);
     }
 }
 
