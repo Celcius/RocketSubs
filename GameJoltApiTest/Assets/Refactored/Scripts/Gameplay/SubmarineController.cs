@@ -258,6 +258,7 @@ public class SubmarineController : MonoBehaviour
     }
     private void UpdateFuel(bool isMoving, bool onSeaAfterBounce)
     {
+        return;
         if(onSeaAfterBounce)
         {
             fuel.Value = Mathf.Clamp(fuel.Value + Time.deltaTime * stats.MaxFuel / stats.FuelRecoveryTime, 0, stats.MaxFuel);
