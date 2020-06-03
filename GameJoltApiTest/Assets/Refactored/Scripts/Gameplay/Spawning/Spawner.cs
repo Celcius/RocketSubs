@@ -2,34 +2,73 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Spawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField]
-    private SpawnerDefinition definition;
+    private Spawnee spawneePrefab;
+    public Spawnee SpawneePrefab => spawneePrefab;
+
+    [SerializeField]
+    private SpawnStrategy spawnStrategy;
+    [SerializeField]
+    private SpawnPosition positionDefinition;
 
     [SerializeField]
     private SpawnedDirection overrideDir;
 
     private List<Spawnee> spawnees = new List<Spawnee>();
+    public int LiveSpawnees => spawnees.Count;
 
-    public abstract Vector3 GetNextSpawnPosition();
+    private bool hasSpawnStart = false;
 
-    private void Spawn()
+    private void Awake() 
     {
-        if(definition == null || definition.SpawneePrefab == null)
+         StartSpawn();
+    }
+
+    private void OnDestroy()
+    {
+        UnspawnAll();
+        StopSpawn();
+    }
+
+    public void Spawn()
+    {
+        if(spawneePrefab == null || spawnStrategy == null)
         {
             Debug.LogError("Cannot spawn from null at " + this.name);
             return;
         }
-        Vector3 position = GetNextSpawnPosition();
-        Spawnee directionable = GameObject.Instantiate<Spawnee>(definition.SpawneePrefab, position, Quaternion.identity);
+        Vector3 position = positionDefinition.GetNextSpawnPosition(!hasSpawnStart);
+        
+        Spawnee directionable = GameObject.Instantiate<Spawnee>(spawneePrefab, position, Quaternion.identity);
         directionable.OnSpawn(this.overrideDir, OnSpawneeDeath);
-        spawnees.Remove(directionable);
+        spawnees.Add(directionable);
+
+        spawnStrategy.OnSpawn(directionable, this);
     }
 
     private void OnSpawneeDeath(Spawnee spawnee)
     {
         spawnees.Remove(spawnee);
+
+        spawnStrategy.OnSpawnDeath(spawnee, this);
+    }
+
+    private void StartSpawn()
+    {
+        hasSpawnStart = false;
+        spawnStrategy.OnSpawnStart(this);
+        hasSpawnStart = true;
+    }
+
+    private void StopSpawn(bool unspawn = true)
+    {
+        spawnStrategy.OnSpawnStop(this);
+        if(unspawn)
+        {
+            UnspawnAll();
+        }
     }
 
     private void UnspawnAll()
@@ -39,6 +78,7 @@ public abstract class Spawner : MonoBehaviour
             spawnee.Unspawn();
         }
         spawnees.Clear();
+        hasSpawnStart = false;
     }
 
 }

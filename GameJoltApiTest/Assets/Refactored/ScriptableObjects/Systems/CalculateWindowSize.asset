@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208a0a2ae82fad644a4909617b6f19d6, type: 3}
+  m_Name: CalculateWindowSize
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 11400000, guid: 9c310b1e4c9f61846b40688bc6cf0c84, type: 2}
+  windowBounds: {fileID: 11400000, guid: 2ac86de3ccebc55479a69e43a885dd85, type: 2}

@@ -22,3 +22,4 @@ MonoBehaviour:
   waterHeight: 0
   timeBetweenSplashes: 0.1
   bounceEvent: {fileID: 11400000, guid: 9b63d194048d0c44da41405fba19fb7e, type: 2}
+  stats: {fileID: 11400000, guid: 000fd55ac7a00854bb4b66647654ca56, type: 2}

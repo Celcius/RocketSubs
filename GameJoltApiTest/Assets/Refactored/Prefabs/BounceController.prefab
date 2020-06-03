@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2755418411666411937}
   - component: {fileID: 6778276711575730026}
+  - component: {fileID: 7988218596459446334}
   m_Layer: 0
   m_Name: BounceController
   m_TagString: Untagged
@@ -46,3 +47,22 @@ MonoBehaviour:
   bounceEvent: {fileID: 11400000, guid: 9b63d194048d0c44da41405fba19fb7e, type: 2}
   onSea: {fileID: 11400000, guid: 1b9a15de53ad8e145a61ab1d82b8a4ab, type: 2}
   skipCount: {fileID: 11400000, guid: 9acd867001bd8b2489184b2cca670816, type: 2}
+  maxSkipCount: {fileID: 11400000, guid: 22257d3d5bfb13040a600adbc6439f22, type: 2}
+  skipEffectsPrefab: {fileID: 3420443211871748493, guid: 0ec89d23f0942c3478c722a3f27d314c,
+    type: 3}
+  submarinePos: {fileID: 11400000, guid: efb67622da7966b40a7cc90bda1ed3d3, type: 2}
+--- !u!114 &7988218596459446334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776555951672982665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464c0298e81e17049b8da3bb68b8aee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSea: {fileID: 11400000, guid: 1b9a15de53ad8e145a61ab1d82b8a4ab, type: 2}
+  submarinePos: {fileID: 11400000, guid: efb67622da7966b40a7cc90bda1ed3d3, type: 2}
+  maxHeight: {fileID: 11400000, guid: 0b9345f670d16304ea2084166932c0ea, type: 2}

@@ -103,12 +103,12 @@ PrefabInstance:
     - target: {fileID: 7821561068718838369, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7821561068718838369, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7821561068718838369, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
         type: 3}
@@ -160,6 +160,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Helicopter
       objectReference: {fileID: 0}
+    - target: {fileID: 7821561068718838375, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Spawnee
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821561068718838375, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7821561068718838396, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
         type: 3}
       propertyPath: m_Offset.x
@@ -189,6 +199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: type
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018197333900045909, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9a78e8fb2076bc47b2cf76b1897f9a2, type: 3}

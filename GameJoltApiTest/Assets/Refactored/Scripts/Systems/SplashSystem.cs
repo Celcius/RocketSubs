@@ -34,6 +34,9 @@ public class SplashSystem : ScriptableObject
    [SerializeField]
    private VoidEvent bounceEvent;
 
+   [SerializeField]
+    private SubmarineStats stats;
+
    private IEnumerator splashRoutine;
    private CoroutineRunner splashRunner;
 
@@ -92,7 +95,9 @@ public class SplashSystem : ScriptableObject
        {
             StopSplash();
        }
-       else if(newPos.y < heightThreshold)
+       else if(newPos.y < heightThreshold 
+                && submarineBody.Value.velocity.x > stats.BounceSpeedX
+                && submarineBody.Value.velocity.y > stats.BounceSpeedY)
        {
            StartSplash();
        }

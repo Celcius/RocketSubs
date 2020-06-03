@@ -49,12 +49,14 @@
      <Compile Include="Assets\Packages\Core\AnimateFramesAndDestroy.cs" />
      <Compile Include="Assets\Packages\Core\ApplyOnCollision.cs" />
      <Compile Include="Assets\Packages\Core\BootScriptableObject.cs" />
+     <Compile Include="Assets\Packages\Core\CalculateOrtographicWindowBounds.cs" />
      <Compile Include="Assets\Packages\Core\CoroutineRunner.cs" />
      <Compile Include="Assets\Packages\Core\FileUtils.cs" />
      <Compile Include="Assets\Packages\Core\GeometryUtils.cs" />
      <Compile Include="Assets\Packages\Core\MathUtils.cs" />
      <Compile Include="Assets\Packages\Core\PreloadedScriptablesBooter.cs" />
      <Compile Include="Assets\Packages\Core\ReflectionUtils.cs" />
+     <Compile Include="Assets\Packages\Core\ResizeBasedOnVectorVar.cs" />
      <Compile Include="Assets\Packages\Core\SceneTransitionDefinition.cs" />
      <Compile Include="Assets\Packages\Core\SceneTransitionHandler.cs" />
      <Compile Include="Assets\Packages\Core\SceneTransitionOperation.cs" />
@@ -62,6 +64,7 @@
      <Compile Include="Assets\Packages\Core\StructUtils.cs" />
      <Compile Include="Assets\Packages\Core\UndrawableGraphic.cs" />
      <Compile Include="Assets\Packages\Core\UnityEngineUtils.cs" />
+     <Compile Include="Assets\Packages\GameplayUtils\ChangeFollowOffsetOnScreenSize.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\CurveTransformMove.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\DestroyOnCollision.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\FollowTransform.cs" />
@@ -72,6 +75,7 @@
      <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxableSprite.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxController.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxFollowTransform.cs" />
+     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxFromWindowBounds.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\PhysicsAnimationCurve.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\TransformMovement.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyForceToBody2DOnCollision.cs" />
@@ -80,11 +84,13 @@
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyToVarOnCollision.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\BoolEvent.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\BoolVar.cs" />
+     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\CameraVar.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\FloatEvent.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\FloatVar.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\IntEvent.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\IntVar.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\QuaternionVar.cs" />
+     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterCameraVar.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterComponentVar.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterRigidbody2D.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterTransform.cs" />

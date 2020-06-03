@@ -29,9 +29,9 @@ MonoBehaviour:
   SeaImpulse: 100
   SeaDrag: 2
   AirDrag: 0.5
-  BounceSpeedX: 25
+  BounceSpeedX: 5
   BounceSpeedY: 10
-  BounceAngle: 45
+  BounceAngle: 60
   MaxBounceAngle: 90
-  BounceHorizontalLoss: 0.3
-  BounceVerticalLoss: 0.95
+  BounceHorizontalLoss: 0.5
+  BounceVerticalLoss: 0.5

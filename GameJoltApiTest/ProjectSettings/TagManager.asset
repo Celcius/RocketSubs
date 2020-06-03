@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Missile
-  - EnemyMissile
-  - Enemy
+  - Spawnee
   layers:
   - Default
   - TransparentFX
@@ -16,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Spawnee
   - 
   - 
   - 
