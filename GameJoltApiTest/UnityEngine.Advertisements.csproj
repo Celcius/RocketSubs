@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0ee63fef-f744-ec64-a56f-86fe2852a471}</ProjectGuid>
+    <ProjectGuid>{27e4084d-3ecc-5edc-6207-f0f9a4018c38}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>AmoaebaUtils</AssemblyName>
+    <AssemblyName>UnityEngine.Advertisements</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,69 +36,48 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Packages\Core\AnimateFrames.cs" />
-     <Compile Include="Assets\Packages\Core\AnimateFramesAndDestroy.cs" />
-     <Compile Include="Assets\Packages\Core\ApplyOnCollision.cs" />
-     <Compile Include="Assets\Packages\Core\BootScriptableObject.cs" />
-     <Compile Include="Assets\Packages\Core\CalculateOrtographicWindowBounds.cs" />
-     <Compile Include="Assets\Packages\Core\CoroutineRunner.cs" />
-     <Compile Include="Assets\Packages\Core\FileUtils.cs" />
-     <Compile Include="Assets\Packages\Core\GeometryUtils.cs" />
-     <Compile Include="Assets\Packages\Core\MathUtils.cs" />
-     <Compile Include="Assets\Packages\Core\PreloadedScriptablesBooter.cs" />
-     <Compile Include="Assets\Packages\Core\ReflectionUtils.cs" />
-     <Compile Include="Assets\Packages\Core\ResizeBasedOnVectorVar.cs" />
-     <Compile Include="Assets\Packages\Core\SceneTransitionDefinition.cs" />
-     <Compile Include="Assets\Packages\Core\SceneTransitionHandler.cs" />
-     <Compile Include="Assets\Packages\Core\SceneTransitionOperation.cs" />
-     <Compile Include="Assets\Packages\Core\Singleton.cs" />
-     <Compile Include="Assets\Packages\Core\StructUtils.cs" />
-     <Compile Include="Assets\Packages\Core\UndrawableGraphic.cs" />
-     <Compile Include="Assets\Packages\Core\UnityEngineUtils.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\ChangeFollowOffsetOnScreenSize.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\CurveTransformMove.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\DestroyOnCollision.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\FollowTransform.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\InstantiateOnCollision.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\LinearTransformMovement.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\AnimateParallax.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxController.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxFollowTransform.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxFromWindowBounds.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\Parallaxable.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxableSprite.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\PhysicsAnimationCurve.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\TransformMovement.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyForceToBody2DOnCollision.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyToFloatVarOnCollision.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyToIntVarOnCollision.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyToVarOnCollision.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ArrayVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\BoolEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\BoolVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\CameraVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\FloatEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\FloatVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ICollectionVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\IntEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\IntVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\QuaternionVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterCameraVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterComponentVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterRigidbody2D.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterTransform.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\Rigidbody2DVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptableArgumentEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptableEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptableObjectUtility.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\StringEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\TransformVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\Vector2Var.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\Vector3Var.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\VoidEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\SingletonScriptableObject.cs" />
-     <None Include="Assets\Packages\AmoaebaUtils.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Advertisement.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Banner.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\BannerLoadOptions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\BannerOptions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Configuration.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Enums\BannerPosition.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Enums\PlacementState.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Enums\ShowResult.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Events\FinishEventArgs.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Events\StartEventArgs.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\IBanner.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\INativeBanner.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\IUnityAdsListener.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\MetaData.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Android\AndroidBanner.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Android\AndroidPlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Android\BannerBundle.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Editor\BannerPlaceholder.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Editor\EditorBanner.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Editor\EditorPlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Editor\Placeholder.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\INativePlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\IPlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Platform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Unsupported\UnsupportedBanner.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\Unsupported\UnsupportedPlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\iOS\IosBanner.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Platform\iOS\IosPlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Purchasing\IPurchase.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Purchasing\IPurchasingEventSender.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Purchasing\Purchase.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Purchasing\Purchasing.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Purchasing\PurchasingPlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\ShowOptions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Utilities\ApplicationQuit.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Utilities\Color.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Utilities\CoroutineExecutor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Utilities\IUnityLifecycleManager.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Utilities\MiniJSON.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\Utilities\UnityLifecycleManager.cs" />
+     <None Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Advertisement\UnityEngine.Advertisements.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -671,14 +650,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{2327abc8-bfb5-0940-8182-82fd807fd021}</Project>
-      <Name>UnityEditor.UI</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{0f6e332f-38f6-c2ba-cecc-47b6d4520d50}</Project>
       <Name>UnityEngine.UI</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{2327abc8-bfb5-0940-8182-82fd807fd021}</Project>
+      <Name>UnityEditor.UI</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

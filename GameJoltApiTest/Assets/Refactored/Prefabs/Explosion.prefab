@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -96,13 +97,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75b805c1d979444d82fba071241fb65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
-  useLayerMask: 0
+  collisionType: 0
+  useLayerMask: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  useTag: 1
-  tag: Player
+    m_Bits: 512
+  useTag: 0
+  otherTag: 
   var: {fileID: 11400000, guid: 51a1de6128f71a24c94f730159d8db88, type: 2}
   force: {x: 100, y: 0}
   mode: 1

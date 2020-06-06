@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0ee63fef-f744-ec64-a56f-86fe2852a471}</ProjectGuid>
+    <ProjectGuid>{109c25da-eec3-e121-ce1a-5f7772822bf3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>AmoaebaUtils</AssemblyName>
+    <AssemblyName>UnityEngine.Monetization</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,69 +36,43 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Packages\Core\AnimateFrames.cs" />
-     <Compile Include="Assets\Packages\Core\AnimateFramesAndDestroy.cs" />
-     <Compile Include="Assets\Packages\Core\ApplyOnCollision.cs" />
-     <Compile Include="Assets\Packages\Core\BootScriptableObject.cs" />
-     <Compile Include="Assets\Packages\Core\CalculateOrtographicWindowBounds.cs" />
-     <Compile Include="Assets\Packages\Core\CoroutineRunner.cs" />
-     <Compile Include="Assets\Packages\Core\FileUtils.cs" />
-     <Compile Include="Assets\Packages\Core\GeometryUtils.cs" />
-     <Compile Include="Assets\Packages\Core\MathUtils.cs" />
-     <Compile Include="Assets\Packages\Core\PreloadedScriptablesBooter.cs" />
-     <Compile Include="Assets\Packages\Core\ReflectionUtils.cs" />
-     <Compile Include="Assets\Packages\Core\ResizeBasedOnVectorVar.cs" />
-     <Compile Include="Assets\Packages\Core\SceneTransitionDefinition.cs" />
-     <Compile Include="Assets\Packages\Core\SceneTransitionHandler.cs" />
-     <Compile Include="Assets\Packages\Core\SceneTransitionOperation.cs" />
-     <Compile Include="Assets\Packages\Core\Singleton.cs" />
-     <Compile Include="Assets\Packages\Core\StructUtils.cs" />
-     <Compile Include="Assets\Packages\Core\UndrawableGraphic.cs" />
-     <Compile Include="Assets\Packages\Core\UnityEngineUtils.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\ChangeFollowOffsetOnScreenSize.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\CurveTransformMove.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\DestroyOnCollision.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\FollowTransform.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\InstantiateOnCollision.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\LinearTransformMovement.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\AnimateParallax.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxController.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxFollowTransform.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxFromWindowBounds.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\Parallaxable.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\Parallax\ParallaxableSprite.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\PhysicsAnimationCurve.cs" />
-     <Compile Include="Assets\Packages\GameplayUtils\TransformMovement.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyForceToBody2DOnCollision.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyToFloatVarOnCollision.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyToIntVarOnCollision.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ApplyToVarOnCollision.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ArrayVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\BoolEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\BoolVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\CameraVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\FloatEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\FloatVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ICollectionVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\IntEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\IntVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\QuaternionVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterCameraVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterComponentVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterRigidbody2D.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\RegisterTransform.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\Rigidbody2DVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptableArgumentEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptableEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptableObjectUtility.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\StringEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\TransformVar.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\Vector2Var.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\Vector3Var.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\VoidEvent.cs" />
-     <Compile Include="Assets\Packages\ScriptableObjectUtils\SingletonScriptableObject.cs" />
-     <None Include="Assets\Packages\AmoaebaUtils.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\Analytics.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\AndroidAnalytics.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\AndroidJavaObjectExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\AndroidNativePromoAdapter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\AndroidPlacementContentOperations.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\Configuration.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\Creator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\EditorNativePromoAdapter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\EditorPlacementContentOperations.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\IMonetizationPlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\INativePromoAdapter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\IPlacementContentOperations.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\IPurchasingAdapter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\IosAnalytics.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\IosNativePromoAdapter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\IosPlacementContentOperations.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\JavaEnumUtilities.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\JavaMapUtilities.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\MetaData.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\MiniJSON.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\Monetization.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\MonetizationPlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\Placeholder.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\PlacementContent.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\PlacementContentReadyEventArgs.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\PlacementContentState.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\PlacementContentStateChangeEventArgs.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\PlacementContentType.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\Product.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\PromoMetadata.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\PurchasingAdapterCallbacks.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\Store.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\TransactionError.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\UnityServicesErrorEventArgs.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\UnsupportedPlatform.cs" />
+     <None Include="Library\PackageCache\com.unity.ads@3.4.5\Runtime\Monetization\UnityEngine.Monetization.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -671,6 +645,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{27e4084d-3ecc-5edc-6207-f0f9a4018c38}</Project>
+      <Name>UnityEngine.Advertisements</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{2327abc8-bfb5-0940-8182-82fd807fd021}</Project>
       <Name>UnityEditor.UI</Name>

@@ -27,13 +27,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e14a6cbe71f08448c0487a0c567553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
-  useLayerMask: 0
+  collisionType: 0
+  useLayerMask: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  useTag: 1
-  tag: Player
+    m_Bits: 512
+  useTag: 0
+  otherTag: 
   toInstantiate: {fileID: 4406485920912793912, guid: fc782ede83e12724dae1c2192ec37fc7,
     type: 3}
 --- !u!114 &6438155796133298256
@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: 1
+  spawnees: {fileID: 11400000, guid: a4bc10fbf691ff143938339f3b89bacd, type: 2}
 --- !u!114 &2872835026092659300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +200,26 @@ PrefabInstance:
         type: 3}
       propertyPath: type
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821561068718838397, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
+        type: 3}
+      propertyPath: otherTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821561068718838397, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821561068718838397, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
+        type: 3}
+      propertyPath: useLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821561068718838397, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
+        type: 3}
+      propertyPath: useTag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8018197333900045909, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
         type: 3}
