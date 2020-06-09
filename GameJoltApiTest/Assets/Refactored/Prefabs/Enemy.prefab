@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7821561068718838369}
   - component: {fileID: 7821561068718838396}
   - component: {fileID: 7821561068718838397}
+  - component: {fileID: 4784796578741241546}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -71,13 +72,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e1ee4819b130e46ae06acf44ddfb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  collisionType: 0
   useLayerMask: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 0
   useTag: 1
-  tag: Player
+  otherTag: 
+  destructionType: 0
+--- !u!114 &4784796578741241546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7821561068718838375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e14a6cbe71f08448c0487a0c567553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionType: 0
+  useLayerMask: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  useTag: 0
+  otherTag: 
+  toInstantiate: {fileID: 4406485920912793912, guid: fc782ede83e12724dae1c2192ec37fc7,
+    type: 3}
+  useOtherPos: 0
 --- !u!1 &8018197333900045909
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +147,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

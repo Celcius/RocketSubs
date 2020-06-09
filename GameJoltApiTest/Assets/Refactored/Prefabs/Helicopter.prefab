@@ -1,5 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &700910007686778893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4008707903994431064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c77871b6a12c44db9e7300b9b5e724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3347582331345962909, guid: 2adbfc57721696d429f7ab925845e7a1, type: 3}
+  timeToStart: 2
+  randomTimeToStart: 0
+  timeBetween: 7
+  randomTimeBetween: 3
+  offset: {x: 1, y: -1.5, z: 0}
+  amount:
+    check: 0
+    value: 0
+  camera: {fileID: 11400000, guid: 9c310b1e4c9f61846b40688bc6cf0c84, type: 2}
+  cameraScale: 2
+  cameraSizeInc: {x: 50, y: 50}
+  cameraOffset: {x: 0, y: 0}
 --- !u!114 &3858681961257725118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,27 +40,7 @@ MonoBehaviour:
   canMove: 1
   AxisMultipliers: {x: 1, y: 1, z: 1}
   linearMovement: {x: 10, y: 0, z: 0}
---- !u!114 &5754790833075564048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4008707903994431064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7e14a6cbe71f08448c0487a0c567553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionType: 0
-  useLayerMask: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
-  useTag: 0
-  otherTag: 
-  toInstantiate: {fileID: 4406485920912793912, guid: fc782ede83e12724dae1c2192ec37fc7,
-    type: 3}
+  absoluteMovement: 1
 --- !u!114 &6438155796133298256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +105,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049085643302142005, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1284303299
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049085643302142005, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7821561068718838369, guid: f9a78e8fb2076bc47b2cf76b1897f9a2,
         type: 3}

@@ -17,6 +17,24 @@ public class TerrainDefinition : MonoBehaviour
     public Transform[] ShapeTransforms;
     public Transform[] EdgeTransforms;
 
+    public int GetOrderInLayer()
+    {
+        SpriteShapeRenderer renderer = GetComponentInChildren<SpriteShapeRenderer>();
+        return renderer == null? 0 : renderer.sortingOrder;
+    }
+
+    public static void SetOrderInLayer(int order, Transform[] transforms)
+    {
+        foreach(Transform t in transforms)
+        {
+            SpriteShapeRenderer renderer = t.GetComponent<SpriteShapeRenderer>();
+            if(renderer != null)
+            {
+                renderer.sortingOrder = order;
+            }
+        }
+    }
+    
 #if UNITY_EDITOR
     public void UpdateDefinition()
     {

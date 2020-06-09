@@ -16,8 +16,8 @@ TagManager:
   - 
   - Spawnee
   - Player
-  - 
-  - 
+  - Projectile
+  - Limits
   - 
   - 
   - 
@@ -41,4 +41,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2017556671
+    locked: 0
+  - name: Projectiles
+    uniqueID: 4066324333
+    locked: 0
+  - name: Enemies
+    uniqueID: 1284303299
+    locked: 0
+  - name: Submarine
+    uniqueID: 3546962057
+    locked: 0
+  - name: Foreground
+    uniqueID: 2043152505
+    locked: 0
+  - name: Terrain
+    uniqueID: 2400711191
     locked: 0

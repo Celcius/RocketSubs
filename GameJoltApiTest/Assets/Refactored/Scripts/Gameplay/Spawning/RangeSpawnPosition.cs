@@ -56,6 +56,7 @@ public class RangeSpawnPosition : FixedSpawnPosition
     {
         return center + GeometryUtils.RandomPointInRectangle(computedRange);
     }
+    
     private Vector2 GetOutOfBoxPos()
     {
         bool found = false;

@@ -37,6 +37,11 @@ public class TerrainController : MonoBehaviour
         Transform[] minTerrains = InstantiateTerrains(newVar.EdgeTransforms, -newVar.MaxX + newVar.MinX -newVar.transform.position.x, newVar.transform.position.y);
         Transform[] maxTerrains = InstantiateTerrains(newVar.EdgeTransforms, newVar.MaxX - newVar.MinX -newVar.transform.position.x, newVar.transform.position.y);
 
+        int order = newVar.GetOrderInLayer();
+
+        TerrainDefinition.SetOrderInLayer(order+1, minTerrains);
+        TerrainDefinition.SetOrderInLayer(order-1, maxTerrains);
+
         newTerrains.AddRange(minTerrains);
         newTerrains.AddRange(maxTerrains);
     }

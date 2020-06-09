@@ -5,6 +5,9 @@ using System;
 
 public class AmountSpawnStrategy : SpawnStrategy
 {
+    [SerializeField]
+    private bool respawnOnDeath = true;
+    
     private bool isSpawning = false;
 
     public override void OnSpawnStart(Spawner spawner)
@@ -25,7 +28,7 @@ public class AmountSpawnStrategy : SpawnStrategy
     public override void OnSpawnDeath(Spawnee spawnee, Spawner spawner)
     {
         base.OnSpawnDeath(spawnee, spawner);
-        if(isSpawning)
+        if(isSpawning && respawnOnDeath)
         {
             base.Spawn(spawner);
         }

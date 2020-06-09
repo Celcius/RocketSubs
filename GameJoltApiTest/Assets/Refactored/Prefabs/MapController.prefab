@@ -84,3 +84,4 @@ MonoBehaviour:
   terrainVar: {fileID: 11400000, guid: 050dc679c126f9b4cbddf2c626b9177c, type: 2}
   submarine: {fileID: 11400000, guid: 73684c8af7f37314abf66f9b2e27887a, type: 2}
   submarinePos: {fileID: 11400000, guid: efb67622da7966b40a7cc90bda1ed3d3, type: 2}
+  spawnees: {fileID: 11400000, guid: a4bc10fbf691ff143938339f3b89bacd, type: 2}

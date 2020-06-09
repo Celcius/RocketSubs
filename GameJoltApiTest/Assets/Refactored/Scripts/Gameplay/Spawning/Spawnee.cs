@@ -41,7 +41,7 @@ public abstract class Spawnee : MonoBehaviour
     {
         if(spawnees != null)
         {
-            spawnees.Add(this);
+            spawnees.Remove(this);
         }
         OnDestructionCallback?.Invoke(this);
     }
