@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad9c4faedbd6ac46862b2bd0a5aed8b, type: 3}
+  m_Name: PlayGameMode
+  m_EditorClassIdentifier: 
+  sceneVar: {fileID: 11400000, guid: b3e1f224b15edec4880316c92fdd56db, type: 2}
+  isInputBlocked: {fileID: 11400000, guid: 00583e755424de74babe54f4e9a2ad73, type: 2}
+  fuel: {fileID: 11400000, guid: b26d8230e48560d4eaed49a168e97906, type: 2}
+  health: {fileID: 11400000, guid: 8ac34a4f780053a45a13574e98370bcc, type: 2}
+  maxHealth: {fileID: 11400000, guid: 812c4bb161674384fba4de8b72266b31, type: 2}
+  skipCount: {fileID: 11400000, guid: 9acd867001bd8b2489184b2cca670816, type: 2}
+  usingFuel: {fileID: 11400000, guid: 6aa1e2b02314c434ea6ebd88b05f8ba9, type: 2}
+  isPlaying: {fileID: 11400000, guid: ca30ccea1d797fc42962f3412c4fd5cc, type: 2}
+  endGameMenu: {fileID: 2892713050192876530, guid: 3a676853fc346ff4798886dcf42e2439,
+    type: 3}
