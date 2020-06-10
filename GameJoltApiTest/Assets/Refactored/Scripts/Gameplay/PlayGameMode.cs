@@ -1,6 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AmoaebaUtils;
+
+#if UNITY_ENGINE
+using UnityEditor;
+#endif
 
 public class PlayGameMode : GameMode
 {
@@ -29,48 +34,90 @@ public class PlayGameMode : GameMode
     [SerializeField]
     protected Transform endGameMenu;
 
+    [SerializeField]
+    protected IntVar collectedParts;
+
+    [SerializeField]
+    protected IntVar totalParts;
+
+    [SerializeField]
+    protected FloatVar totalTime;
+
+    [SerializeField]
+    protected FloatVar time;
+    private CoroutineRunner runner;
     public override void StartGameMode()
     {
-        if(isRunning)
+#if UNITY_ENGINE
+        bool appRunning = Application.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode;
+#else
+        bool appRunning = Application.isPlaying;
+#endif
+        if(isRunning || !appRunning)
         {
             return;
         }
-        
+
         fuel.Reset();
         health.Value = maxHealth.Value;
-        skipCount.Value = 0;
+        time.Value = totalTime.Value;
         usingFuel.Value = false;
+        
+        skipCount.Value = 0;
+        collectedParts.Value = 0;
 
-        health.OnChange += OnHealthChanged;
+        time.OnChange += CheckEndGame;
+        health.OnChange += CheckEndGame;
 
         isPlaying.Value = isRunning = true;
         isInputBlocked.Value = false;
+
+        if(runner != null)
+        {
+            Destroy(runner);
+        }
+
+        runner = CoroutineRunner.Instantiate(this.name);
+        runner.StartCoroutine(RunGameTimer());
     }
 
     public override void StopGameMode()
     {
-        if(!isRunning)
+        if(isRunning || !Application.isPlaying)
         {
             return;
         }
-        
-        health.OnChange -= OnHealthChanged;
+
+        Destroy(runner);
+        runner = null;
+        time.OnChange -= CheckEndGame;
+        health.OnChange -= CheckEndGame;
 
         isPlaying.Value = isRunning = false;
         isInputBlocked.Value = true;
     }
 
-    private void OnHealthChanged(float oldVal, float newVal)
+    private void CheckEndGame(float oldVal, float newVal)
     {
         if(isRunning && oldVal > 0 && newVal <= 0)
         {
-            FinishedGameMode();
+            EndGame(health.Value > 0);
         }
     }
 
-    private void FinishedGameMode()
+    public void EndGame(bool won)
     {
         StopGameMode();
         Instantiate(endGameMenu);
+    }
+
+    private IEnumerator RunGameTimer()
+    {
+        while(time.Value > 0)
+        {
+            time.Value -= Time.deltaTime;
+            yield return new WaitForEndOfFrame(); 
+        }
+        CheckEndGame(0,time.Value);
     }
 }

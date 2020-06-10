@@ -55,6 +55,11 @@
      <Compile Include="Assets\Packages\Core\StructUtils.cs" />
      <Compile Include="Assets\Packages\Core\UndrawableGraphic.cs" />
      <Compile Include="Assets\Packages\Core\UnityEngineUtils.cs" />
+     <Compile Include="Assets\Packages\Core\UpdateTextOnFloatVarChange.cs" />
+     <Compile Include="Assets\Packages\Core\UpdateTextOnIntVarChange.cs" />
+     <Compile Include="Assets\Packages\Core\UpdateTextOnStringVarChange.cs" />
+     <Compile Include="Assets\Packages\Core\UpdateTextOnTimeVarChange.cs" />
+     <Compile Include="Assets\Packages\Core\UpdateTextOnVarChange.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\ChangeFollowOffsetOnScreenSize.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\CurveTransformMove.cs" />
      <Compile Include="Assets\Packages\GameplayUtils\DestroyOnCollision.cs" />
@@ -97,6 +102,7 @@
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptableEvent.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\ScriptableObjectUtility.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\StringEvent.cs" />
+     <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\StringVar.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\TransformVar.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\Vector2Var.cs" />
      <Compile Include="Assets\Packages\ScriptableObjectUtils\ScriptVar\Vector3Var.cs" />
@@ -675,6 +681,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{a1e94845-079b-01d4-23c9-a4e5d8d28866}</Project>
+      <Name>Unity.TextMeshPro</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{2327abc8-bfb5-0940-8182-82fd807fd021}</Project>
       <Name>UnityEditor.UI</Name>

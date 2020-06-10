@@ -22,3 +22,7 @@ MonoBehaviour:
   isPlaying: {fileID: 11400000, guid: ca30ccea1d797fc42962f3412c4fd5cc, type: 2}
   endGameMenu: {fileID: 2892713050192876530, guid: 3a676853fc346ff4798886dcf42e2439,
     type: 3}
+  collectedParts: {fileID: 11400000, guid: ba081b3f2eb5d7a4f8ea5fe91fba48b9, type: 2}
+  totalParts: {fileID: 11400000, guid: dc59d5f7954a77741bb3fa766f773e1b, type: 2}
+  totalTime: {fileID: 11400000, guid: 55ee1310d3458f242a04a92cd0f2a0d2, type: 2}
+  time: {fileID: 11400000, guid: abb915b878fe2824ea0f6fe04a56688c, type: 2}

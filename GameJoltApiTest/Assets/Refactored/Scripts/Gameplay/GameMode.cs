@@ -12,6 +12,7 @@ public class GameMode : ScriptableObject
 
     private void OnEnable()
     {
+        isRunning = false;
         StopGameMode();
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
