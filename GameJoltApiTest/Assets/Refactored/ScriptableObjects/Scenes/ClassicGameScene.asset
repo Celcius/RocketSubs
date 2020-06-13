@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ClassicGameScene
   m_EditorClassIdentifier: 
   setupValue:
-    m_Handle: 1
+    m_Handle: 0
   value:
-    m_Handle: 1
+    m_Handle: 0

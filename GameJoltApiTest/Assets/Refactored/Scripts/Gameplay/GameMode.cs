@@ -42,7 +42,12 @@ public class GameMode : ScriptableObject
 
     public void PlayGameMode()
     {
-        SceneManager.LoadScene(sceneVar.Value.name, LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneVar.Value.handle, LoadSceneMode.Single);
+    }
+
+    public virtual void HandleAdReward(string placementId)
+    {
+
     }
     
     public virtual void StopGameMode()

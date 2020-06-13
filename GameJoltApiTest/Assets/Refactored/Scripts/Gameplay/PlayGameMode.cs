@@ -32,6 +32,9 @@ public class PlayGameMode : GameMode
     protected BoolVar isPlaying;
 
     [SerializeField]
+    protected BoolVar wonGame;
+
+    [SerializeField]
     protected Transform endGameMenu;
 
     [SerializeField]
@@ -51,7 +54,7 @@ public class PlayGameMode : GameMode
 #if UNITY_ENGINE
         bool appRunning = Application.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode;
 #else
-        bool appRunning = Application.isPlaying;
+        bool appRunning = true;
 #endif
         if(isRunning || !appRunning)
         {
@@ -71,6 +74,7 @@ public class PlayGameMode : GameMode
 
         isPlaying.Value = isRunning = true;
         isInputBlocked.Value = false;
+        wonGame.Value = false;
 
         if(runner != null)
         {
@@ -108,6 +112,7 @@ public class PlayGameMode : GameMode
     public void EndGame(bool won)
     {
         StopGameMode();
+        wonGame.Value = won;
         Instantiate(endGameMenu);
     }
 

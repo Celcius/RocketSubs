@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7821561068718838396}
   - component: {fileID: 7821561068718838397}
   - component: {fileID: 4784796578741241546}
+  - component: {fileID: 5297685723902536803}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -102,6 +103,29 @@ MonoBehaviour:
   toInstantiate: {fileID: 4406485920912793912, guid: fc782ede83e12724dae1c2192ec37fc7,
     type: 3}
   useOtherPos: 0
+  offset: {x: 0, y: 0, z: 0}
+  euler: {x: 0, y: 0, z: 0}
+--- !u!114 &5297685723902536803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7821561068718838375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51077c8d2b4f3e9439f767d4d315c6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionType: 0
+  useLayerMask: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  useTag: 0
+  otherTag: 
+  var: {fileID: 11400000, guid: ba081b3f2eb5d7a4f8ea5fe91fba48b9, type: 2}
+  inc: 1
 --- !u!1 &8018197333900045909
 GameObject:
   m_ObjectHideFlags: 0

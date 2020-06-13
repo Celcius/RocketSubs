@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.XR.LegacyInputH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.SpatialTracking", "UnityEngine.SpatialTracking.csproj", "{8B38F443-0C86-EF07-CB85-B097A8DF377C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmoaebaAds", "AmoaebaAds.csproj", "{F66EDD84-A49E-1D53-CCAB-A679FC431DC2}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InternalAPIEngineBridge.001", "Unity.InternalAPIEngineBridge.001.csproj", "{4520983C-45E3-589A-7607-42B6CFCDABB8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Common.Runtime", "Unity.2D.Common.Runtime.csproj", "{8A8670B2-5842-2EDE-EA25-81799CD5CC45}"
@@ -149,6 +151,10 @@ Global
 		{8B38F443-0C86-EF07-CB85-B097A8DF377C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B38F443-0C86-EF07-CB85-B097A8DF377C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B38F443-0C86-EF07-CB85-B097A8DF377C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66EDD84-A49E-1D53-CCAB-A679FC431DC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66EDD84-A49E-1D53-CCAB-A679FC431DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66EDD84-A49E-1D53-CCAB-A679FC431DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66EDD84-A49E-1D53-CCAB-A679FC431DC2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4520983C-45E3-589A-7607-42B6CFCDABB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4520983C-45E3-589A-7607-42B6CFCDABB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4520983C-45E3-589A-7607-42B6CFCDABB8}.Release|Any CPU.ActiveCfg = Release|Any CPU

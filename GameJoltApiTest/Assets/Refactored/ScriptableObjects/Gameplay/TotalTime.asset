@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 512621dc42e1f3b4490fc9878add1a40, type: 3}
   m_Name: TotalTime
   m_EditorClassIdentifier: 
-  setupValue: 120
-  value: 120
+  setupValue: 5
+  value: 5

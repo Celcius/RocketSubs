@@ -20,6 +20,7 @@ MonoBehaviour:
   skipCount: {fileID: 11400000, guid: 9acd867001bd8b2489184b2cca670816, type: 2}
   usingFuel: {fileID: 11400000, guid: 6aa1e2b02314c434ea6ebd88b05f8ba9, type: 2}
   isPlaying: {fileID: 11400000, guid: ca30ccea1d797fc42962f3412c4fd5cc, type: 2}
+  wonGame: {fileID: 11400000, guid: c9ce5601cde0ac949911ee5adccd5aa6, type: 2}
   endGameMenu: {fileID: 2892713050192876530, guid: 3a676853fc346ff4798886dcf42e2439,
     type: 3}
   collectedParts: {fileID: 11400000, guid: ba081b3f2eb5d7a4f8ea5fe91fba48b9, type: 2}
