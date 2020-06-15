@@ -30,10 +30,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using frame8.Logic.Misc.Other.Extensions;
 using Com.TheFallenGames.OSA.Core;
 using Com.TheFallenGames.OSA.CustomParams;
 using Com.TheFallenGames.OSA.DataHelpers;
+using TMPro;
 
 // You should modify the namespace to your own or - if you're sure there won't ever be conflicts - remove it altogether
 namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
@@ -46,6 +49,12 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 		// Can be iterated and can also have its elements accessed by the [] operator
 		public SimpleDataHelper<SubmarineViewModel> Data { get; private set; }
 
+		[SerializeField]
+		private SubmarineDefinitionArrayVar subs;
+
+		[SerializeField]
+		private SubmarineDefinitionVar currentSub;
+
 
 		#region OSA implementation
 		protected override void Start()
@@ -56,7 +65,7 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 			base.Start();
 
 			// Retrieve the models from your data source and set the items count
-			RetrieveDataAndUpdate(500);
+			RetrieveDataAndUpdate();
 		}
 
 		// This is called initially, as many times as needed to fill the viewport, 
@@ -88,12 +97,7 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 			// to retrieve the model from your data set
 			
 			SubmarineViewModel model = Data[newOrRecycled.ItemIndex];
-			if(model != null && newOrRecycled != null)
-			{
-				newOrRecycled.backgroundImage.color = model.color;
-				newOrRecycled.titleText.text = model.title + " #" + newOrRecycled.ItemIndex;
-			}
-			
+			newOrRecycled.UpdateInfo(model);
 		}
 
 		// This is the best place to clear an item's views in order to prepare it from being recycled, but this is not always needed, 
@@ -120,8 +124,8 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 		protected override void OnItemIndexChangedDueInsertOrRemove(SubmarineViewHolder shiftedViewsHolder, int oldIndex, bool wasInsert, int removeOrInsertIndex)
 		{
 			base.OnItemIndexChangedDueInsertOrRemove(shiftedViewsHolder, oldIndex, wasInsert, removeOrInsertIndex);
-
-			shiftedViewsHolder.titleText.text = Data[shiftedViewsHolder.ItemIndex].title + " #" + shiftedViewsHolder.ItemIndex;
+			SubmarineViewModel model = Data[shiftedViewsHolder.ItemIndex];
+			shiftedViewsHolder.UpdateInfo(model);
 		}
 		
 		#endregion
@@ -162,39 +166,62 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 
 
 		// Here, we're requesting <count> items from the data source
-		void RetrieveDataAndUpdate(int count)
+		void RetrieveDataAndUpdate()
 		{
-			StartCoroutine(FetchMoreItemsFromDataSourceAndUpdate(count));
+			StartCoroutine(FetchMoreItemsFromDataSourceAndUpdate());
 		}
 
 		// Retrieving <count> models from the data source and calling OnDataRetrieved after.
 		// In a real case scenario, you'd query your server, your database or whatever is your data source and call OnDataRetrieved after
-		IEnumerator FetchMoreItemsFromDataSourceAndUpdate(int count)
+		IEnumerator FetchMoreItemsFromDataSourceAndUpdate()
 		{
 			// Simulating data retrieving delay
-			yield return new WaitForSeconds(.5f);
+//			yield return new WaitForSeconds(.5f);
+
+			int count = subs.Value.Length;
+			EventSystem eventSystem = EventSystem.current;
 			
 			var newItems = new SubmarineViewModel[count];
 
-			// Retrieve your data here
-			
-			for (int i = 0; i < count; ++i)
+			for(int i = 0; i < count; i++)
 			{
-				var model = new SubmarineViewModel()
+				SubmarineDefinition def = subs.Value[i];
+				UnityAction action = () => 
 				{
-					title = "Random item ",
-					color = new Color(
-								UnityEngine.Random.Range(0f, 1f),
-								UnityEngine.Random.Range(0f, 1f),
-								UnityEngine.Random.Range(0f, 1f),
-								UnityEngine.Random.Range(0f, 1f)
-							)
+					currentSub.Value = def;
+					UpdateSelectedButton(def, eventSystem);
 				};
-				newItems[i] = model;
+				newItems[i] = new SubmarineViewModel(def.Name,
+													 def.RepresentationUI,
+													 action);
 			}
 
-
 			OnDataRetrieved(newItems);
+
+			UpdateSelectedButton(currentSub.Value, eventSystem);
+			
+			yield break;
+		}
+
+		void UpdateSelectedButton(SubmarineDefinition def, EventSystem system)
+		{
+			int count = subs.Value.Length;
+			int selectedIndex = subs.GetIndexFor(currentSub.Value);
+
+			if(selectedIndex < 0 || selectedIndex >= count)
+			{
+				return;
+			}
+
+			for(int j = 0; j < count; j++)
+			{
+				bool isSelected = selectedIndex == j;
+				currentSub.Value = subs.Value[selectedIndex];
+				SubmarineViewHolder holder = GetItemViewsHolderIfVisible(j);
+				holder.IsSelected(isSelected, system);
+			}
+
+			
 		}
 
 		void OnDataRetrieved(SubmarineViewModel[] newItems)
@@ -207,7 +234,16 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 	public class SubmarineViewModel
 	{
 		public string title;
-		public Color color;
+		public Sprite representation;
+
+		public UnityAction action;
+
+		public SubmarineViewModel(string title, Sprite representation, UnityAction buttonEvent)
+		{
+			this.title = title;
+			this.representation = representation;
+			this.action = buttonEvent;	
+		}
 		
 	}
 
@@ -216,7 +252,9 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 	// Your views holder should extend BaseItemViewsHolder for ListViews and CellViewsHolder for GridViews
 	public class SubmarineViewHolder : BaseItemViewsHolder
 	{
-		public Text titleText;
+		public EventTrigger trigger;
+		public Image bgImage;
+		public TextMeshProUGUI titleText;
 		public Image backgroundImage;
 
 
@@ -228,9 +266,34 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 			// GetComponentAtPath is a handy extension method from frame8.Logic.Misc.Other.Extensions
 			// which infers the variable's component from its type, so you won't need to specify it yourself
 			
+			trigger = root.GetComponent<EventTrigger>();
+			bgImage = root.GetComponent<Image>();
 			root.GetComponentAtPath("TitleText", out titleText);
 			root.GetComponentAtPath("BackgroundImage", out backgroundImage);
+		}
+
+		public void UpdateInfo(SubmarineViewModel model)
+		{
+			titleText.text = model.title;
+			backgroundImage.sprite = model.representation;
 			
+			trigger.triggers.Clear();
+			
+			EventTrigger.Entry pointerDown = new EventTrigger.Entry();
+			pointerDown.eventID = EventTriggerType.PointerEnter;
+ 			pointerDown.callback.AddListener((e) => { model.action.Invoke(); });
+			trigger.triggers.Add(pointerDown);
+		}
+
+		public void IsSelected(bool selected, EventSystem system)
+		{
+			if(selected && system != null)
+			{
+				system.SetSelectedGameObject(trigger.gameObject);
+			}
+			Color normal = Color.black;
+			normal.a = 0;
+			bgImage.color = selected? Color.yellow : normal;
 		}
 
 		// Override this if you have children layout groups or a ContentSizeFitter on root that you'll use. 

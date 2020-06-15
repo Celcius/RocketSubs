@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c641ebb98957419d06e8c7d9ac7fa, type: 3}
+  m_Name: Sub2Stats
+  m_EditorClassIdentifier: 
+  RotateAccelInc: 10
+  AngularDrag: 50
+  MaxRotateAccelSpeed: 5
+  MaxRotateSpeed: 8
+  TimeToFire: 0.2
+  MaxHealth: 3
+  MaxFuel: 1
+  FuelConsumptionTime: 5
+  FuelRecoveryTime: 5
+  MaxAirSpeed: 40
+  MaxSeaSpeed: 25
+  AirGravity: 2
+  SeaGravity: 0.5
+  AirImpulse: 150
+  SeaImpulse: 100
+  SeaDrag: 2
+  AirDrag: 0.5
+  BounceSpeedX: 5
+  BounceSpeedY: 10
+  BounceAngle: 60
+  MaxBounceAngle: 90
+  BounceHorizontalLoss: 0.5
+  BounceVerticalLoss: 0.5

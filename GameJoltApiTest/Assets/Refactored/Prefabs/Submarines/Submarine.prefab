@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7427cc780c6249e479c8eb971ec0d27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 000fd55ac7a00854bb4b66647654ca56, type: 2}
+  currentSubmarineDef: {fileID: 11400000, guid: c66ff863be466e04284f8c81bafd9528,
+    type: 2}
   onSeaDetected: {fileID: 11400000, guid: ec2b6551e34ab074a8e6be5d398f8be7, type: 2}
   onSea: {fileID: 11400000, guid: 1b9a15de53ad8e145a61ab1d82b8a4ab, type: 2}
   fuel: {fileID: 11400000, guid: b26d8230e48560d4eaed49a168e97906, type: 2}
@@ -191,7 +192,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -748005239
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 8939199459898043502, guid: be998c30fb04c044782dd88a6815b1ce,
     type: 3}

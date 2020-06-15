@@ -7,8 +7,10 @@ using AmoaebaUtils;
 public class SubmarineController : MonoBehaviour 
 {
     [SerializeField]
+    private SubmarineDefinitionVar currentSubmarineDef;
+
     private SubmarineStats stats;
-    
+
     [SerializeField]
     private BoolEvent onSeaDetected;
     
@@ -56,6 +58,7 @@ public class SubmarineController : MonoBehaviour
 
 	void Start () {
         //ScoreManager.Instance.sub = this;
+        stats = currentSubmarineDef.Value.Stats;
         
         onSea.Value = true;
         onSeaDetected.OnEvent += OnSeaChangeDetected;
