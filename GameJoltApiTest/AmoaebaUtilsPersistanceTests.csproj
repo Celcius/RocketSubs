@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3b1bfc43-477b-3ab7-e4ce-521c89b8d2cd}</ProjectGuid>
+    <ProjectGuid>{68d21261-25af-f502-36a2-ceeb53feb630}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>com.unity.multiplayer-hlapi.Editor</AssemblyName>
+    <AssemblyName>AmoaebaUtilsPersistanceTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,26 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkAnimatorEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkBehaviourInspector.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkDiscoveryEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkIdentityEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkInformationPreview.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkLobbyManagerEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkManagerEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkManagerHUDEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkManagerPreview.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkMigrationManagerEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkScenePostProcess.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkTransformChildEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkTransformEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkTransformPreview.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\NetworkTransformVisualizerEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\Properties\AssemblyInfo.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\Tools\MiniJSON.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\Tools\TextUtility.cs" />
-     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\WeaverRunner.cs" />
-     <None Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.0.6\Editor\com.unity.multiplayer-hlapi.Editor.asmdef" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\Persistance\Tests\AmoaebaPersistanceTestSuite.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\Persistance\Tests\Generated\MessagePack_Formatters_AmoaebaUtils_TestStructFormatter.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\Persistance\Tests\Generated\MessagePack_Resolvers_GeneratedResolver.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\Persistance\Tests\InitMessagePackTests.cs" />
+     <None Include="Assets\Packages\AmoaebaUtils\Persistance\Tests\AmoaebaUtilsPersistanceTests.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -251,56 +236,11 @@
     <Reference Include="UnityEditor.Android.Extensions">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Google.GData.AccessControl">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/GoogleExporter/Google Sheets to Unity/Scripts/v3/Plugins/Google.GData.AccessControl.DLL</HintPath>
-    </Reference>
-    <Reference Include="Google.GData.Client">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/GoogleExporter/Google Sheets to Unity/Scripts/v3/Plugins/Google.GData.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.GData.Documents">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/GoogleExporter/Google Sheets to Unity/Scripts/v3/Plugins/Google.GData.Documents.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.GData.Extensions">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/GoogleExporter/Google Sheets to Unity/Scripts/v3/Plugins/Google.GData.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.GData.Spreadsheets">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/GoogleExporter/Google Sheets to Unity/Scripts/v3/Plugins/Google.GData.Spreadsheets.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/GoogleExporter/Google Sheets to Unity/Scripts/v3/Plugins/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="TinyJSON">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/GoogleExporter/Google Sheets to Unity/Scripts/v3/Plugins/TinyJSON.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Buffers">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/Persistance/MessagePack/Plugins/System.Buffers.dll</HintPath>
+    <Reference Include="nunit.framework">
+        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
         <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/Persistance/MessagePack/Plugins/System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/Persistance/MessagePack/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Assets/Packages/AmoaebaUtils/Persistance/MessagePack/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Advertisements">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.ads@3.4.5/Editor/UnityEditor.Advertisements.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Editor">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Tracker">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-        <HintPath>C:/Users/ivoca/Documents/RocketSubs/GameJoltApiTest/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.0f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -658,14 +598,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="com.unity.multiplayer-hlapi.Runtime.csproj">
-      <Project>{62a4c075-4806-5c48-fe43-4750e2657047}</Project>
-      <Name>com.unity.multiplayer-hlapi.Runtime</Name>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{4679078f-5b71-2013-aa39-3c498fda06b9}</Project>
+      <Name>UnityEngine.TestRunner</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-weaver.Editor.csproj">
-      <Project>{19087067-c42a-b7eb-49e6-3cfd24bace5f}</Project>
-      <Name>com.unity.multiplayer-weaver.Editor</Name>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{324de4e5-698f-5e65-417c-d8b61ea6821f}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Persistance.csproj">
+      <Project>{39501eb5-d7a7-2867-ed6d-410328109c3a}</Project>
+      <Name>Persistance</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="MessagePack.csproj">
+      <Project>{2bf95f44-914d-1617-419a-6974167331f8}</Project>
+      <Name>MessagePack</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="AmoaebaUtils.csproj">
+      <Project>{0ee63fef-f744-ec64-a56f-86fe2852a471}</Project>
+      <Name>AmoaebaUtils</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
@@ -676,16 +631,6 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{0f6e332f-38f6-c2ba-cecc-47b6d4520d50}</Project>
       <Name>UnityEngine.UI</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{324de4e5-698f-5e65-417c-d8b61ea6821f}</Project>
-      <Name>UnityEditor.TestRunner</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{4679078f-5b71-2013-aa39-3c498fda06b9}</Project>
-      <Name>UnityEngine.TestRunner</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
