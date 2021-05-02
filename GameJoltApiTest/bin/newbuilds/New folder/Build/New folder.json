@@ -1,0 +1,11 @@
+{
+"companyName": "Amoaeba Junior",
+"productName": "Rocket Subs",
+"dataUrl": "New folder.data.unityweb",
+"asmCodeUrl": "New folder.asm.code.unityweb",
+"asmMemoryUrl": "New folder.asm.memory.unityweb",
+"asmFrameworkUrl": "New folder.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
