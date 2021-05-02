@@ -1,3 +1,6 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Shader created with Shader Forge v1.14 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
@@ -84,14 +87,14 @@ Shader "Shader Forge/Examples/Vertex Animation" {
                 o.ambientOrLightmapUV.zw = v.texcoord2.xy * unity_DynamicLightmapST.xy + unity_DynamicLightmapST.zw;
             #endif
             o.normalDir = UnityObjectToWorldNormal(v.normal);
-            o.tangentDir = normalize( mul( _Object2World, float4( v.tangent.xyz, 0.0 ) ).xyz );
+            o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
             o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
             float4 node_2623 = _Time + _TimeEditor;
             float node_133 = pow((abs((frac((o.uv0+node_2623.g*float2(0.25,0)).r)-0.5))*2.0),_BulgeShape); // Panning gradient
             v.vertex.xyz += (node_133*_BulgeScale*v.normal);
-            o.posWorld = mul(_Object2World, v.vertex);
+            o.posWorld = mul(unity_ObjectToWorld, v.vertex);
             float3 lightColor = _LightColor0.rgb;
-            o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+            o.pos = UnityObjectToClipPos(v.vertex);
             UNITY_TRANSFER_FOG(o,o.pos);
             TRANSFER_VERTEX_TO_FRAGMENT(o)
             return o;
@@ -227,14 +230,14 @@ Shader "Shader Forge/Examples/Vertex Animation" {
             o.uv1 = v.texcoord1;
             o.uv2 = v.texcoord2;
             o.normalDir = UnityObjectToWorldNormal(v.normal);
-            o.tangentDir = normalize( mul( _Object2World, float4( v.tangent.xyz, 0.0 ) ).xyz );
+            o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
             o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
             float4 node_5851 = _Time + _TimeEditor;
             float node_133 = pow((abs((frac((o.uv0+node_5851.g*float2(0.25,0)).r)-0.5))*2.0),_BulgeShape); // Panning gradient
             v.vertex.xyz += (node_133*_BulgeScale*v.normal);
-            o.posWorld = mul(_Object2World, v.vertex);
+            o.posWorld = mul(unity_ObjectToWorld, v.vertex);
             float3 lightColor = _LightColor0.rgb;
-            o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+            o.pos = UnityObjectToClipPos(v.vertex);
             TRANSFER_VERTEX_TO_FRAGMENT(o)
             return o;
         }
@@ -332,8 +335,8 @@ Shader "Shader Forge/Examples/Vertex Animation" {
             float4 node_7742 = _Time + _TimeEditor;
             float node_133 = pow((abs((frac((o.uv0+node_7742.g*float2(0.25,0)).r)-0.5))*2.0),_BulgeShape); // Panning gradient
             v.vertex.xyz += (node_133*_BulgeScale*v.normal);
-            o.posWorld = mul(_Object2World, v.vertex);
-            o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+            o.posWorld = mul(unity_ObjectToWorld, v.vertex);
+            o.pos = UnityObjectToClipPos(v.vertex);
             TRANSFER_SHADOW_CASTER(o)
             return o;
         }
@@ -401,7 +404,7 @@ Shader "Shader Forge/Examples/Vertex Animation" {
             float4 node_2517 = _Time + _TimeEditor;
             float node_133 = pow((abs((frac((o.uv0+node_2517.g*float2(0.25,0)).r)-0.5))*2.0),_BulgeShape); // Panning gradient
             v.vertex.xyz += (node_133*_BulgeScale*v.normal);
-            o.posWorld = mul(_Object2World, v.vertex);
+            o.posWorld = mul(unity_ObjectToWorld, v.vertex);
             o.pos = UnityMetaVertexPosition(v.vertex, v.texcoord1.xy, v.texcoord2.xy, unity_LightmapST, unity_DynamicLightmapST );
             return o;
         }
