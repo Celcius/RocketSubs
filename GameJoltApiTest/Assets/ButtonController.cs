@@ -50,4 +50,9 @@ public class ButtonController : MonoBehaviour {
         credits.SetActive(false);
     }
 
+    public void Play()
+    {
+        Application.LoadLevel(1);
+    }
+
 }

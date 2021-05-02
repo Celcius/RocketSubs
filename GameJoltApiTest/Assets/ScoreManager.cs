@@ -78,22 +78,6 @@ public class ScoreManager : MonoBehaviour {
         sources = new AudioSource[sounds.Length];
         for (int i = 0; i < sounds.Length;i ++ )
             sources[i] = gameObject.AddComponent<AudioSource>();
-
-         GameJolt.API.DataStore.Get("SCORE", false, (string value) =>
-             {
-                    if (value != null)
-                    {
-                        highScore = float.Parse(value);
-                    }
-                });
-
-                GameJolt.API.DataStore.Get("HANG", false, (string value) =>
-                {
-                    if (value != null)
-                    {
-                        hangTimeHighScore = float.Parse(value);
-                    }
-                });
         
 	}
 
@@ -101,10 +85,6 @@ public class ScoreManager : MonoBehaviour {
     {
         gameOver = true;
 
-        if (maxLocalHangtime >= hangTimeHighScore)
-            GameJolt.API.Scores.Add((int)maxLocalHangtime, maxLocalHangtime.ToString("F0") + " seconds", HANG_TAG);
-        if(score >= highScore)
-             GameJolt.API.Scores.Add((int)score, score + " points", SCORE_TAG);
     }
 	
     public void addScore(float add)
@@ -113,8 +93,7 @@ public class ScoreManager : MonoBehaviour {
         if(score > highScore)
         {
             highScore = score;
-            
-            GameJolt.API.DataStore.Set("SCORE", "" + highScore, false, (bool success) => { });
+        
         }
     }
 
@@ -162,7 +141,6 @@ public class ScoreManager : MonoBehaviour {
         {
             hangTimeHighScore = prevVal;
 
-            GameJolt.API.DataStore.Set("HANG","" + prevVal, false, (bool success) => { });
         }
 
         //Debug.Log(hangTime);
@@ -220,13 +198,7 @@ public class ScoreManager : MonoBehaviour {
 
     void attemptUnlock(int trophyID)
     {
-        GameJolt.API.Trophies.Get(trophyID, (GameJolt.API.Objects.Trophy trophy) =>
-        {
-            if (trophy != null && !trophy.Unlocked)
-            {
-                GameJolt.API.Trophies.Unlock(trophyID);
-            }
-        });
+
     }
 
     public void playWater()

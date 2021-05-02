@@ -99,7 +99,7 @@ public class FauxSub : MonoBehaviour {
             Destroy(col.gameObject);
             if(health <=0)
             {
-                Application.LoadLevel(1);
+                Application.LoadLevel(0);
             }
         }
 
